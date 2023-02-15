@@ -14,7 +14,8 @@
     ],
     "properties": {
       "id": {
-        "type": "integer"
+        "type": "integer",
+        "minimum": 1
       },
       "name": {
         "type": "string",
@@ -22,14 +23,15 @@
       },
       "number": {
         "type": "string",
-        "pattern": "^•• \\d{4}$"
+        "pattern": "^•• [0-9]{4}$"
       },
       "balance": {
         "type": "integer",
         "default": 0
       },
       "currency": {
-        "type": "string"
+        "type": "string",
+        "pattern": "^(RUB|USD)$"
       }
     }
   }
